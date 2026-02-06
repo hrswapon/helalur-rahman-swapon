@@ -3,400 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helalur Rahman Swapon | GIS Analyst & Urban Planner</title>
+    <title>Helalur Rahman Swapon | GIS Spatial Analyst Portfolio</title>
     <style>
-        /* --- CSS VARIABLES & RESET --- */
         :root {
-            --primary-color: #0f172a; /* Dark Slate */
-            --accent-color: #0ea5e9; /* Sky Blue */
-            --text-color: #334155;
-            --light-bg: #f8fafc;
-            --white: #ffffff;
-            --border-radius: 8px;
-            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --primary: #0f172a;
+            --accent: #0ea5e9;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-main);
-            color: var(--text-color);
-            line-height: 1.6;
-            background-color: var(--light-bg);
-        }
-
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-
-        /* --- LAYOUT UTILITIES --- */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            border-bottom: 3px solid var(--accent-color);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        section {
-            padding: 60px 0;
-        }
-
-        /* --- HEADER & NAV --- */
-        header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--accent-color);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 90vh;
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            text-align: center;
-        }
-
-        .hero-content {
-            width: 100%;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-            color: #cbd5e1;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--white);
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: bold;
-            margin: 5px;
-        }
-
-        .btn:hover {
-            background-color: #0284c7;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--white);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--white);
-            color: var(--primary-color);
-        }
-
-        /* --- ABOUT & EDUCATION --- */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 25px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--accent-color);
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-
-        .date {
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-bottom: 10px;
-            display: block;
-            font-style: italic;
-        }
-
-        /* --- SKILLS --- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-category h3 {
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-
-        .skill-tag {
-            display: inline-block;
-            background: #e0f2fe;
-            color: #0369a1;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin: 3px;
-            font-weight: 600;
-        }
-
-        /* --- CERTIFICATIONS --- */
-        .cert-list a {
-            color: var(--accent-color);
-            text-decoration: underline;
-        }
-        .cert-list li {
-            margin-bottom: 10px;
-        }
-
-        /* --- CONTACT --- */
-        .contact-info {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text-main); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
         
-        .contact-item {
-            margin: 10px 0;
-            font-size: 1.1rem;
-        }
+        /* Header */
+        header { background: var(--primary); color: white; padding: 80px 0 40px; text-align: center; }
+        header h1 { font-size: 2.8rem; margin-bottom: 10px; letter-spacing: -1px; }
+        .contact-bar { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; font-size: 0.9rem; }
+        .contact-bar a { color: var(--accent); text-decoration: none; }
 
-        /* --- FOOTER --- */
-        footer {
-            background-color: var(--primary-color);
-            color: #94a3b8;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 50px;
-        }
+        /* Sections */
+        section { padding: 60px 0; border-bottom: 1px solid #e2e8f0; }
+        .section-title { font-size: 1.8rem; color: var(--primary); margin-bottom: 30px; display: flex; align-items: center; gap: 10px; }
+        .section-title::after { content: ""; height: 2px; background: var(--accent); flex-grow: 1; }
 
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Simplified for mobile */
-        }
+        /* Experience & Education Cards */
+        .item { margin-bottom: 30px; background: var(--card); padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .item-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .item-title { font-weight: 700; font-size: 1.2rem; color: var(--primary); }
+        .item-date { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; background: #f1f5f9; padding: 4px 12px; border-radius: 20px; }
+        .item-sub { color: var(--accent); font-weight: 600; margin-bottom: 10px; display: block; }
+        .item ul { list-style-position: inside; color: #475569; }
+        .item li { margin-bottom: 5px; }
+
+        /* Skills Grid */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .skill-card { background: var(--card); padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .skill-card h4 { margin-bottom: 15px; color: var(--primary); border-left: 4px solid var(--accent); padding-left: 10px; }
+        .tag-container { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { background: #f1f5f9; color: #334155; padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; }
+
+        /* Certifications */
+        .cert-link { color: var(--accent); font-size: 0.85rem; text-decoration: none; display: block; margin-top: 5px; }
+        .cert-link:hover { text-decoration: underline; }
+
+        /* References */
+        .ref-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .ref-grid { grid-template-columns: 1fr; } .item-header { flex-direction: column; gap: 10px; } }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Helalur R. Swapon</div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+<header>
+    <div class="container">
+        <h1>Helalur Rahman Swapon</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">Urban & Regional Planning Undergraduate</p>
+        <div class="contact-bar">
+            <span>📞 +8801785242400</span>
+            <a href="mailto:hrswapon00@gmail.com">✉️ hrswapon00@gmail.com</a>
+            <a href="https://www.linkedin.com/in/helalur-rahman-swapon" target="_blank">🔗 LinkedIn</a>
+            <span>📍 Pabna, Bangladesh</span>
         </div>
-    </header>
+    </div>
+</header>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>Helalur Rahman Swapon</h1>
-            <p>Urban Planner | GIS Spatial Analyst | Python Programmer</p>
-            <p style="font-size: 1rem; opacity: 0.8;">Passionate about applying data-driven approaches to solve real-world urban and environmental challenges.</p>
-            <div>
-                <a href="#contact" class="btn">Get in Touch</a>
-                <a href="https://www.linkedin.com/in/helalur-rahman-swapon" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
-            </div>
-        </div>
+<div class="container">
+    <section>
+        <h2 class="section-title">Career Objective</h2>
+        <p>A passionate and dedicated Urban and Regional Planning undergraduate with strong interests in GIS, remote sensing, and spatial data analysis. Proficient in Python programming, ArcGIS, and statistical tools, with hands-on experience in urban research, field surveys, and GIS-based mapping. Aspires to build a career as a GIS Spatial Analyst, applying data-driven approaches to solve real-world urban and environmental challenges.</p>
     </section>
 
     <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>Intern | Sheltech Consultants (Pvt.) Ltd.</h3>
-                    <span class="date">Feb 2025 – Mar 2025 | Dhaka, Bangladesh</span>
-                    <ul>
-                        <li>• Assisted in urban/infrastructure planning via GIS-based analysis.</li>
-                        <li>• Prepared technical reports and supported consultants in field surveys.</li>
-                        <li>• Gained exposure to master planning and spatial data handling.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Research Assistant | DNCC</h3>
-                    <span class="date">Jun 2024 – Sep 30, 2024 | Dhaka, Bangladesh</span>
-                    <ul>
-                        <li>• Designed and conducted surveys and questionnaires.</li>
-                        <li>• Collected, processed, and analyzed large-scale urban data.</li>
-                        <li>• Produced GIS maps using ArcGIS, Excel, and Stata.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Programme Management | Planning Carnival</h3>
-                    <span class="date">Nov 2022 | URP, RUET</span>
-                    <ul>
-                        <li>• Organized academic and technical events related to planning & GIS.</li>
-                        <li>• Coordinated student and faculty efforts for program execution.</li>
-                    </ul>
-                </div>
+        <h2 class="section-title">Work Experience</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Internship</span>
+                <span class="item-date">Feb 28, 2025 – Mar 25, 2025</span>
             </div>
-        </div>
-    </section>
-
-    <section id="skills" style="background-color: var(--white);">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                
-                <div class="skill-category">
-                    <h3>GIS & Remote Sensing</h3>
-                    <div>
-                        <span class="skill-tag">ArcGIS Pro/Desktop</span>
-                        <span class="skill-tag">QGIS</span>
-                        <span class="skill-tag">Google Earth Pro</span>
-                        <span class="skill-tag">ERDAS</span>
-                        <span class="skill-tag">DroneDeploy</span>
-                        <span class="skill-tag">Pix4D</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Programming & Data</h3>
-                    <div>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Pandas/NumPy</span>
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">SPSS/Stata</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Tools & Soft Skills</h3>
-                    <div>
-                        <span class="skill-tag">KoboToolbox</span>
-                        <span class="skill-tag">PowerBI</span>
-                        <span class="skill-tag">MS Office</span>
-                        <span class="skill-tag">Leadership</span>
-                        <span class="skill-tag">Problem Solving</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="education">
-        <div class="container">
-            <h2 class="section-title">Academic Credentials</h2>
-            <div class="card">
-                <h3>Bachelor of Urban and Regional Planning (BURP)</h3>
-                <p><strong>Rajshahi University of Engineering & Technology (RUET)</strong></p>
-                <span class="date">Dec 2021 – Ongoing</span>
-                <p><strong>CGPA:</strong> 3.40 / 4.00</p>
-            </div>
-            <br>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>HSC (Science)</h3>
-                    <p>Rajuk Uttara Model College</p>
-                    <span class="date">Passing Year: 2020</span>
-                    <p>GPA: 5.00 / 5.00</p>
-                </div>
-                <div class="card">
-                    <h3>SSC (Science)</h3>
-                    <p>Foiljana High School</p>
-                    <span class="date">Passing Year: 2018</span>
-                    <p>GPA: 5.00 / 5.00</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="certifications" style="background-color: var(--white);">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <ul class="cert-list">
-                <li><strong>Drone-Based Geospatial Data Collection:</strong> Dept of URP, RUET | GIS Club & Tiller</li>
-                <li><strong>Basic Programming with Python:</strong> EDGE-RUET IICT Digital Skills</li>
-                <li><strong>Machine Learning with Python (IBM):</strong> <a href="https://www.coursera.org/account/accomplishments/verify/YPMEIAG9BZRK" target="_blank">View Credential</a></li>
-                <li><strong>Data Analysis with Python (IBM):</strong> <a href="https://www.coursera.org/account/accomplishments/verify/LW2YEVVVDJYJ" target="_blank">View Credential</a></li>
-                <li><strong>Deep Learning with Keras & TensorFlow (IBM):</strong> <a href="https://www.coursera.org/account/accomplishments/verify/6LHLVF2Q2A4W" target="_blank">View Credential</a></li>
-                <li><strong>Six Sigma and the Organization (Kennesaw State):</strong> <a href="https://coursera.org/verify/I17HCWKL0H4N" target="_blank">View Credential</a></li>
+            <span class="item-sub">Sheltech Consultants (Pvt.) Ltd. Dhaka, Bangladesh</span>
+            <ul>
+                <li>Assisted in urban and infrastructure planning projects through research and GIS-based analysis.</li>
+                <li>Prepared technical reports and supported consultants in field surveys.</li>
+                <li>Gained practical exposure to master planning, consultancy workflows, and spatial data handling.</li>
             </ul>
+            <p style="margin-top:10px; font-size: 0.85rem;"><strong>Tools:</strong> ArcGIS, KoboToolbox, MS Office, GIS Mapping</p>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Research Assistant (RA)</span>
+                <span class="item-date">Jun 2, 2024 – Sep 30, 2024</span>
+            </div>
+            <span class="item-sub">Dhaka North City Corporation (DNCC)</span>
+            <ul>
+                <li>Designed and conducted surveys and questionnaires.</li>
+                <li>Collected, processed, and analyzed large-scale urban data.</li>
+                <li>Produced GIS maps and analytical outputs for research purposes.</li>
+            </ul>
+            <p style="margin-top:10px; font-size: 0.85rem;"><strong>Tools:</strong> ArcGIS, Excel, Stata</p>
         </div>
     </section>
 
-    <section id="contact" style="background-color: var(--primary-color); color: var(--white);">
-        <div class="container contact-info">
-            <h2 class="section-title" style="color: var(--white); border-color: var(--accent-color);">Contact Me</h2>
-            <p>I am open to opportunities in GIS Analysis, Urban Planning, and Data Science.</p>
-            <br>
-            <div class="contact-item">
-                <strong>Email:</strong> <a href="mailto:hrswapon00@gmail.com" style="color: var(--accent-color);">hrswapon00@gmail.com</a>
+    <section>
+        <h2 class="section-title">Skills Summary</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h4>GIS & Remote Sensing</h4>
+                <div class="tag-container">
+                    <span class="tag">ArcGIS Desktop/Pro</span> <span class="tag">QGIS</span> 
+                    <span class="tag">Google Earth Pro</span> <span class="tag">ERDAS</span> 
+                    <span class="tag">ENVI</span> <span class="tag">DroneDeploy</span> <span class="tag">Pix4D</span>
+                </div>
             </div>
-            <div class="contact-item">
-                <strong>Phone:</strong> +8801785242400
+            <div class="skill-card">
+                <h4>Programming & Data</h4>
+                <div class="tag-container">
+                    <span class="tag">Python</span> <span class="tag">C</span> <span class="tag">HTML</span> 
+                    <span class="tag">Excel</span> <span class="tag">SPSS</span> <span class="tag">Stata</span> 
+                    <span class="tag">MySQL</span> <span class="tag">PowerBI</span>
+                </div>
             </div>
-            <div class="contact-item">
-                <strong>Location:</strong> Chatmohor, Pabna, Bangladesh
-            </div>
-            <div class="contact-item">
-                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/helalur-rahman-swapon" target="_blank" style="color: var(--accent-color);">linkedin.com/in/helalur-rahman-swapon</a>
+            <div class="skill-card">
+                <h4>Field & Collaboration</h4>
+                <div class="tag-container">
+                    <span class="tag">KoboToolbox</span> <span class="tag">FieldSurvey</span> 
+                    <span class="tag">Mendeley</span> <span class="tag">Jupyter Notebook</span> 
+                    <span class="tag">Canva</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Helalur Rahman Swapon. All Rights Reserved.</p>
+    <section>
+        <h2 class="section-title">Academic Credentials</h2>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Bachelor of Urban and Regional Planning (BURP)</span>
+                <span class="item-date">2021 – Ongoing</span>
+            </div>
+            <span class="item-sub">Rajshahi University of Engineering & Technology (RUET)</span>
+            <p><strong>CGPA: 3.40 / 4.00</strong></p>
         </div>
-    </footer>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Higher Secondary Certificate (HSC)</span>
+                <span class="item-date">Passing Year: 2020</span>
+            </div>
+            <span class="item-sub">Rajuk Uttara Model College (RUMC)</span>
+            <p>GPA: 5.00 / 5.00 | Science</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Certifications</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <strong>Python Basics</strong>
+                <p style="font-size:0.8rem;">University of Michigan</p>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/records/0VWQ421QIYW6">Verify Credential</a>
+            </div>
+            <div class="skill-card">
+                <strong>Machine Learning with Python</strong>
+                <p style="font-size:0.8rem;">IBM</p>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/YPMEIAG9BZRK">Verify Credential</a>
+            </div>
+            <div class="skill-card">
+                <strong>Deep Learning (Keras/TensorFlow)</strong>
+                <p style="font-size:0.8rem;">IBM</p>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/6LHLVF2Q2A4W">Verify Credential</a>
+            </div>
+            <div class="skill-card">
+                <strong>Drone-Based Geospatial Data</strong>
+                <p style="font-size:0.8rem;">URP, RUET | GIS Club & Tiller</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="border-bottom: none;">
+        <h2 class="section-title">References</h2>
+        <div class="ref-grid">
+            <div class="item">
+                <p><strong>Dr. MST Ilme Faridatul</strong></p>
+                <p style="font-size: 0.9rem;">Professor & Head, URP, RUET</p>
+                <p style="font-size: 0.85rem; color: var(--accent);">mifaridatul@urp.ruet.ac.bd</p>
+            </div>
+            <div class="item">
+                <p><strong>Dr. Md. Abdul Wakil</strong></p>
+                <p style="font-size: 0.9rem;">Professor, URP, RUET</p>
+                <p style="font-size: 0.85rem; color: var(--accent);">mawakil@urp.ruet.ac.bd</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer style="background: var(--primary); color: white; padding: 40px 0; text-align: center; margin-top: 40px;">
+    <p>&copy; 2026 Helalur Rahman Swapon. All details verified.</p>
+</footer>
 
 </body>
 </html>
