@@ -70,7 +70,9 @@
         /* References */
         .ref-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         .ref-content { line-height: 1.4; font-size: 0.95rem; }
-        .ref-content strong { display: block; font-size: 1.1rem; margin-bottom: 5px; color: var(--primary); }
+        .ref-content strong a { color: var(--primary); text-decoration: none; display: block; font-size: 1.1rem; margin-bottom: 5px; }
+        .ref-content strong a:hover { color: var(--accent); }
+        .ref-email { color: var(--accent); text-decoration: none; font-weight: 600; }
 
         @media (max-width: 768px) { .ref-grid { grid-template-columns: 1fr; } .item-header { flex-direction: column; } }
     </style>
@@ -101,7 +103,7 @@
         <h2 class="section-title">Academic Credential</h2>
         <div class="item">
             <div class="item-header">
-                <span class="item-title">Rajshahi University of Engineering & Technology (RUET)</span>
+                <span class="item-title"><a href="https://www.ruet.ac.bd/" target="_blank">Rajshahi University of Engineering & Technology (RUET)</a></span>
                 <span class="item-date">December 2021 – Ongoing</span>
             </div>
             <p>Bachelor of Urban and Regional Planning (BURP), CGPA: 3.40 / 4.00</p>
@@ -126,7 +128,7 @@
         <h2 class="section-title">Work Experience</h2>
         <div class="item">
             <div class="item-header">
-                <span class="item-title"><a href="https://www.scplbd.com/" target="_blank">Internship – Sheltech Consultants (Pvt.) Ltd. Dhaka, Bangladesh</a></span>
+                <span class="item-title">Internship – <a href="https://www.scplbd.com/" target="_blank">Sheltech Consultants (Pvt.) Ltd.</a> Dhaka, Bangladesh</span>
                 <span class="item-date">Feb 28, 2025 – Mar 25, 2025</span>
             </div>
             <ul>
@@ -139,7 +141,7 @@
 
         <div class="item">
             <div class="item-header">
-                <span class="item-title"><a href="https://dncc.gov.bd/" target="_blank">Research Assistant (RA), Dhaka North City Corporation (DNCC), Dhaka, Bangladesh</a></span>
+                <span class="item-title">Research Assistant (RA), <a href="https://dncc.gov.bd/" target="_blank">Dhaka North City Corporation</a> (DNCC), Dhaka, Bangladesh</span>
                 <span class="item-date">Jun 2, 2024 – Sep 30, 2024</span>
             </div>
             <ul>
@@ -194,8 +196,16 @@
                 <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/YPMEIAG9BZRK" target="_blank">Verify Credential →</a>
             </div>
             <div class="cert-item">
+                <strong>Data Analysis with Python – IBM</strong>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/LW2YEVVVDJYJ" target="_blank">Verify Credential →</a>
+            </div>
+            <div class="cert-item">
                 <strong>Deep Learning with Keras & TensorFlow – IBM</strong>
                 <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/6LHLVF2Q2A4W" target="_blank">Verify Credential →</a>
+            </div>
+            <div class="cert-item">
+                <strong>Introduction to Neural Networks & PyTorch – IBM</strong>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/WJHAM8Z04CUI" target="_blank">Verify Credential →</a>
             </div>
             <div class="cert-item">
                 <strong>Six Sigma and the Organization (Advanced) – Kennesaw State University</strong>
@@ -208,18 +218,18 @@
         <h2 class="section-title">References</h2>
         <div class="ref-grid">
             <div class="ref-content">
-                <strong>Dr. MST Ilme Faridatul</strong>
+                <strong><a href="https://www.urp.ruet.ac.bd/ilme0309" target="_blank">Dr. MST Ilme Faridatul</a></strong>
                 Professor & Head<br><br>
                 Department of Urban and Regional Planning (URP)<br><br>
                 Rajshahi University of Engineering & Technology (RUET)<br><br>
-                Email: mifaridatul@urp.ruet.ac.bd
+                Email: <a href="mailto:mifaridatul@urp.ruet.ac.bd" class="ref-email">mifaridatul@urp.ruet.ac.bd</a>
             </div>
             <div class="ref-content">
-                <strong>Dr. Md. Abdul Wakil</strong>
+                <strong><a href="https://www.urp.ruet.ac.bd/mawakilwakil" target="_blank">Dr. Md. Abdul Wakil</a></strong>
                 Professor<br><br>
                 Department of Urban and Regional Planning (URP)<br><br>
                 Rajshahi University of Engineering & Technology (RUET)<br><br>
-                Email: mawakil@urp.ruet.ac.bd
+                Email: <a href="mailto:mawakil@urp.ruet.ac.bd" class="ref-email">mawakil@urp.ruet.ac.bd</a>
             </div>
         </div>
     </section>
